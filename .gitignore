@@ -131,6 +131,7 @@ env.bak/
 venv.bak/
 
 .DS_Store
+.sesskey
 
 # Spyder project settings
 .spyderproject
