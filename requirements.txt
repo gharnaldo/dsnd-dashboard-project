@@ -6,7 +6,7 @@ certifi==2026.2.25
 click==8.3.1
 contourpy==1.3.2
 cycler==0.12.1
--e git+https://github.com/gharnaldo/dsnd-dashboard-project.git@0f6de772d3af8da6c9332debada6f5aff23871b2#egg=employee_events&subdirectory=python-package
+python-package/dist/employee_events-0.0.tar.gz
 exceptiongroup==1.3.1
 fastcore==1.12.26
 fastlite==0.2.4
