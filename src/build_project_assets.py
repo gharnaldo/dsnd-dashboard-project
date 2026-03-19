@@ -22,27 +22,27 @@ def left_skew(a, loc, size=500):
 profiles = {
     'good': {
         'positive': lambda: norm.rvs(loc=norm.rvs(4), scale=1).astype(int),
-        'negative': lambda: expon.rvs(loc=0, scale=np.random.choice([.5, 1])).astype(int),
+        'negative': lambda: expon.rvs(loc=0, scale=np.random.choice([.5, 1])).astype(int), 
         'chance': .5
     },
     'normal': {
         'positive': lambda: norm.rvs(loc=norm.rvs(3), scale=1).astype(int),
-        'negative': lambda: norm.rvs(loc=2, scale=np.random.choice([.5, 1,2,3])).astype(int),
+        'negative': lambda: norm.rvs(loc=2, scale=np.random.choice([.5, 1,2,3])).astype(int), 
         'chance': .15
     },
     'poor': {
-        'positive': lambda: expon.rvs(loc=0, scale=.5).astype(int),
-        'negative': lambda: norm.rvs(loc=.5).astype(int),
+        'positive': lambda: expon.rvs(loc=0, scale=.5).astype(int), 
+        'negative': lambda: norm.rvs(loc=.5).astype(int), 
         'chance': .1
     },
     'chaotic_good': {
         'positive': lambda: left_skew(-1000, 5).astype(int),
-        'negative': lambda: np.random.choice([0, np.random.choice([50, 200])], p=[.98, .02]),
+        'negative': lambda: np.random.choice([0, np.random.choice([50, 200])], p=[.98, .02]), 
         'chance': .2
     },
     'chotic_bad': {
-        'positive': lambda: expon.rvs(loc=0, scale=5).astype(int),
-        'negative': lambda: left_skew(-1000, 10).astype(int),
+        'positive': lambda: expon.rvs(loc=0, scale=5).astype(int), 
+        'negative': lambda: left_skew(-1000, 10).astype(int), 
         'chance': .2
     }
 }
